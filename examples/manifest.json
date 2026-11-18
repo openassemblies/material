@@ -1,0 +1,8 @@
+{
+  "examples": [
+    {
+      "example": "examples/part-record/strut-channel-41x41.json",
+      "schema": "part-record/0.2.1/part-record.schema.json"
+    }
+  ]
+}

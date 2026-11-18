@@ -1,0 +1,573 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openmaterial.org/part-record/0.2.1/part-record.schema.json",
+  "title": "Part Record",
+  "version": "0.2.1",
+  "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord",
+  "description": "One part type or part instance: its identity, its classification in published systems, its property values with their basis, and the files it is made from (Open Material).",
+  "type": "object",
+  "properties": {
+    "materialDefinitionId": {
+      "description": "The part's ISA-95 material definition identifier, as a URI.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#materialDefinitionId",
+      "allOf": [
+        {
+          "$ref": "#/definitions/Uri"
+        }
+      ]
+    },
+    "identity": {
+      "description": "How the part is identified: its IEC 61406 identification link and the AAS globalAssetId it resolves to.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#identity",
+      "allOf": [
+        {
+          "$ref": "#/definitions/IdentityCharacteristic"
+        }
+      ]
+    },
+    "classification": {
+      "description": "The part's classes in published systems: ETIM for the product, IFC and CCI for the element.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#classification",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClassificationList"
+        }
+      ]
+    },
+    "typeProperties": {
+      "description": "Values of the classification's properties, each keyed by its published property URI.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#typeProperties",
+      "allOf": [
+        {
+          "$ref": "#/definitions/PropertyValueList"
+        }
+      ]
+    },
+    "manufacturerType": {
+      "description": "Values of the IFC Pset_ManufacturerTypeInformation properties.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#manufacturerType",
+      "allOf": [
+        {
+          "$ref": "#/definitions/PropertyValueList"
+        }
+      ]
+    },
+    "composition": {
+      "description": "How the part is supplied and counted in an assembly.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#composition",
+      "allOf": [
+        {
+          "$ref": "#/definitions/CompositionCharacteristic"
+        }
+      ]
+    },
+    "jobOrder": {
+      "description": "The ISA-95 job order material requirement the part answers.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#jobOrder",
+      "allOf": [
+        {
+          "$ref": "#/definitions/JobOrderLineCharacteristic"
+        }
+      ]
+    },
+    "fabricationFiles": {
+      "description": "The part's geometry and machining files (AP242, AP238, DSTV NC/XNC), referenced by URI and SHA-256, never embedded.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#fabricationFiles",
+      "allOf": [
+        {
+          "$ref": "#/definitions/FileReferenceList"
+        }
+      ]
+    },
+    "baseForm": {
+      "description": "The part's parametric base form: a form kind whose dimensions are read, by property URI, from the part's own typeProperties or, for a dimension that varies by occurrence, from an assembly occurrence's parameters. Each value is held once. It is the design and coordination form a model is generated from; the part's fabrication geometry stays the AP242 file in fabricationFiles, which governs fabrication wherever both exist.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#baseForm",
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseFormCharacteristic"
+        }
+      ]
+    },
+    "provenance": {
+      "description": "Who authored the record, when, from which sources, and whether it is illustrative.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#provenance",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ProvenanceCharacteristic"
+        }
+      ]
+    }
+  },
+  "required": [
+    "materialDefinitionId",
+    "identity",
+    "classification",
+    "typeProperties",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "AssetKind": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#AssetKind",
+      "description": "The AAS asset kind.",
+      "enum": [
+        "Type",
+        "Instance",
+        "Batch"
+      ]
+    },
+    "BaseFormCharacteristic": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#BaseFormCharacteristic",
+      "type": "object",
+      "properties": {
+        "formKind": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#formKind",
+          "allOf": [
+            {
+              "$ref": "#/definitions/FormKind"
+            }
+          ]
+        },
+        "dimensions": {
+          "description": "Each dimension the form kind needs, mapped to the published property that holds its value.",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#dimensions",
+          "allOf": [
+            {
+              "$ref": "#/definitions/FormDimensionList"
+            }
+          ]
+        }
+      },
+      "required": [
+        "formKind",
+        "dimensions"
+      ],
+      "additionalProperties": false
+    },
+    "BasisCharacteristic": {
+      "$ref": "https://schemas.ectropy.ai/v/0.8.0/flow/flow-common.schema.json#/definitions/basis"
+    },
+    "BasisKind": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#BasisKind",
+      "enum": [
+        "measured",
+        "derived",
+        "default",
+        "substituted"
+      ]
+    },
+    "ClassificationList": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#ClassificationList",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ClassificationReference"
+      }
+    },
+    "ClassificationReference": {
+      "$ref": "https://schemas.ectropy.ai/v/0.1.0/_definitions/classification-ref.schema.json"
+    },
+    "CompositionCharacteristic": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#CompositionCharacteristic",
+      "type": "object",
+      "properties": {
+        "selfManaged": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#selfManaged",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Flag"
+            }
+          ]
+        },
+        "madeInPod": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#madeInPod",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Flag"
+            }
+          ]
+        },
+        "bulkCount": {
+          "description": "True when the part is counted in bulk and carries no quantity.",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#bulkCount",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Flag"
+            }
+          ]
+        }
+      },
+      "required": [
+        "selfManaged",
+        "madeInPod"
+      ],
+      "additionalProperties": false
+    },
+    "Count": {
+      "type": "integer",
+      "minimum": 0,
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Count"
+    },
+    "Day": {
+      "type": "string",
+      "format": "date",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Day"
+    },
+    "Decimal": {
+      "type": "number",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Decimal"
+    },
+    "FileReference": {
+      "$ref": "https://schemas.ectropy.ai/v/0.1.0/_definitions/file-reference.schema.json"
+    },
+    "FileReferenceList": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#FileReferenceList",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FileReference"
+      }
+    },
+    "Flag": {
+      "type": "boolean",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Flag"
+    },
+    "FormDimension": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#FormDimension",
+      "type": "object",
+      "properties": {
+        "parameter": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#parameter",
+          "allOf": [
+            {
+              "$ref": "#/definitions/FormParameter"
+            }
+          ]
+        },
+        "propertyUri": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Uri"
+            }
+          ]
+        }
+      },
+      "required": [
+        "parameter",
+        "propertyUri"
+      ],
+      "additionalProperties": false
+    },
+    "FormDimensionList": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#FormDimensionList",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FormDimension"
+      }
+    },
+    "FormKind": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#FormKind",
+      "description": "The base form's geometry, each in its own local frame (origin, local Z, local X): channel -- a lipped channel section of width (local X) and height (local Y), centred on local Z, swept along local Z for its length; rod -- a circular section of its diameter centred on local Z, from the origin along local Z for its length; hex-nut -- a hexagon of its width across flats centred on local Z, from the origin along local Z for its height, bored to its hole diameter; square-washer -- a square of its width centred on local Z, from the origin along local Z for its thickness, bored to its hole diameter; anchor -- a cylinder of its diameter centred on local Z, from the origin along local Z for its length.",
+      "enum": [
+        "channel",
+        "rod",
+        "hex-nut",
+        "square-washer",
+        "anchor"
+      ]
+    },
+    "FormParameter": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter",
+      "description": "A base-form dimension, as its form kind uses it.",
+      "enum": [
+        "length",
+        "width",
+        "height",
+        "thickness",
+        "diameter",
+        "widthAcrossFlats",
+        "holeDiameter"
+      ]
+    },
+    "IdentityCharacteristic": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#IdentityCharacteristic",
+      "type": "object",
+      "properties": {
+        "iec61406Link": {
+          "description": "The IEC 61406 identification link (a GS1 Digital Link under EN 18219 is accepted).",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#iec61406Link",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Uri"
+            }
+          ]
+        },
+        "globalAssetId": {
+          "description": "The AAS globalAssetId the identification link resolves to.",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#globalAssetId",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Uri"
+            }
+          ]
+        },
+        "assetKind": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#assetKind",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AssetKind"
+            }
+          ]
+        },
+        "serialNumber": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#serialNumber",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "lot": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#lot",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        }
+      },
+      "required": [
+        "assetKind"
+      ],
+      "additionalProperties": false
+    },
+    "JobOrderLineCharacteristic": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#JobOrderLineCharacteristic",
+      "type": "object",
+      "properties": {
+        "jobOrderId": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#jobOrderId",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "requirementId": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#requirementId",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "quantity": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#quantity",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Decimal"
+            }
+          ]
+        },
+        "uom": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#uom",
+          "allOf": [
+            {
+              "$ref": "#/definitions/UnitOfMeasure"
+            }
+          ]
+        }
+      },
+      "required": [
+        "jobOrderId",
+        "requirementId"
+      ],
+      "additionalProperties": false
+    },
+    "PropertyValue": {
+      "description": "One property's value, keyed by its published property URI. At most one of numericValue, textValue and booleanValue is present, and a present value carries its basis.",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValue",
+      "type": "object",
+      "properties": {
+        "propertyUri": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Uri"
+            }
+          ]
+        },
+        "propertyCode": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#propertyCode",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "name": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#name",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "propertySet": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#propertySet",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "dataType": {
+          "description": "The property's data type as its dictionary publishes it.",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#dataType",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "allowedUnits": {
+          "description": "The units the property's dictionary allows, as the dictionary publishes their symbols.",
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextList"
+            }
+          ]
+        },
+        "numericValue": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#numericValue",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Decimal"
+            }
+          ]
+        },
+        "textValue": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#textValue",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "booleanValue": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#booleanValue",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Flag"
+            }
+          ]
+        },
+        "unit": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#unit",
+          "allOf": [
+            {
+              "$ref": "#/definitions/UnitOfMeasure"
+            }
+          ]
+        },
+        "basis": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#basis",
+          "allOf": [
+            {
+              "$ref": "#/definitions/BasisCharacteristic"
+            }
+          ]
+        }
+      },
+      "required": [
+        "propertyUri"
+      ],
+      "additionalProperties": false
+    },
+    "PropertyValueList": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValueList",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PropertyValue"
+      }
+    },
+    "ProvenanceCharacteristic": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#ProvenanceCharacteristic",
+      "type": "object",
+      "properties": {
+        "authoredAt": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#authoredAt",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Day"
+            }
+          ]
+        },
+        "authoredBy": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#authoredBy",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Text"
+            }
+          ]
+        },
+        "illustrative": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#illustrative",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Flag"
+            }
+          ]
+        },
+        "sources": {
+          "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#sources",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextList"
+            }
+          ]
+        }
+      },
+      "required": [
+        "authoredAt",
+        "authoredBy",
+        "illustrative",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Resolution",
+      "enum": [
+        "VERIFIED",
+        "UNVERIFIED",
+        "PENDING",
+        "NONE-AVAILABLE"
+      ]
+    },
+    "Text": {
+      "type": "string",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Text"
+    },
+    "TextList": {
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#TextList",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "UnitOfMeasure": {
+      "$ref": "https://schemas.ectropy.ai/v/2.0.0/_definitions/units.schema.json#/definitions/uom"
+    },
+    "Uri": {
+      "type": "string",
+      "format": "uri",
+      "x-samm-aspect-model-urn": "urn:samm:org.openmaterial.part-record:0.2.1#Uri"
+    }
+  }
+}

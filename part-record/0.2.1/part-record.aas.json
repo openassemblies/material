@@ -1,0 +1,3873 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type",
+      "globalAssetId" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "One part type or part instance: its identity, its classification in published systems, its property values with their basis, and the files it is made from (Open Material)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Part record"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "One part type or part instance: its identity, its classification in published systems, its property values with their basis, and the files it is made from (Open Material)."
+    } ],
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Part record"
+    } ],
+    "idShort" : "PartRecord"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The part's ISA-95 material definition identifier, as a URI."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Material definition ID"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#materialDefinitionId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Material definition ID"
+    } ],
+    "idShort" : "materialDefinitionId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The IEC 61406 identification link (a GS1 Digital Link under EN 18219 is accepted)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "iec61406Link"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#iec61406Link",
+    "idShort" : "iec61406Link"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The AAS globalAssetId the identification link resolves to."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "globalAssetId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#globalAssetId",
+    "idShort" : "globalAssetId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "assetKind"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "assetKind"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "Type",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#AssetKind:_Typebaaddf70"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Instance",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#AssetKind:_Instance425f2336"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Batch",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#AssetKind:_Batch320b5d80"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#assetKind",
+    "idShort" : "assetKind"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "serialNumber"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "serialNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#serialNumber",
+    "idShort" : "serialNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "lot"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "lot"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#lot",
+    "idShort" : "lot"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "How the part is identified: its IEC 61406 identification link and the AAS globalAssetId it resolves to."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Identity"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#identity",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Identity"
+    } ],
+    "idShort" : "identity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The classification system, such as etim, ifc or cci."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "system"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#system",
+    "idShort" : "system"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "code"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "code"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#code",
+    "idShort" : "code"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "version"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "version"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#version",
+    "idShort" : "version"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "uri"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "uri"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#uri",
+    "idShort" : "uri"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "licence"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "licence"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#licence",
+    "idShort" : "licence"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "resolution"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resolution"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "VERIFIED",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Resolution:_VERIFIED8766e017"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "UNVERIFIED",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Resolution:_UNVERIFIED726707a0"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "PENDING",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Resolution:_PENDING332011b9"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "NONE-AVAILABLE",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Resolution:_NONE-AVAILABLEc90ba156"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#resolution",
+    "idShort" : "resolution"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "resolvedVia"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resolvedVia"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#resolvedVia",
+    "idShort" : "resolvedVia"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "observedAt"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "observedAt"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#observedAt",
+    "idShort" : "observedAt"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "synthetic"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "synthetic"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#synthetic",
+    "idShort" : "synthetic"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "label"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "label"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#label",
+    "idShort" : "label"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The part's classes in published systems: ETIM for the product, IFC and CCI for the element."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Classification"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#classification",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Classification"
+    } ],
+    "idShort" : "classification"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "propertyUri"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "propertyUri"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri",
+    "idShort" : "propertyUri"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "propertyCode"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "propertyCode"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyCode",
+    "idShort" : "propertyCode"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "name"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "name"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#name",
+    "idShort" : "name"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "propertySet"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "propertySet"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#propertySet",
+    "idShort" : "propertySet"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The property's data type as its dictionary publishes it."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "dataType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#dataType",
+    "idShort" : "dataType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The units the property's dictionary allows, as the dictionary publishes their symbols."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "allowedUnits"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits",
+    "idShort" : "allowedUnits"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "numericValue"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "numericValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#numericValue",
+    "idShort" : "numericValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "textValue"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "textValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#textValue",
+    "idShort" : "textValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "booleanValue"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "booleanValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#booleanValue",
+    "idShort" : "booleanValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "unit"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "unit"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#unit",
+    "idShort" : "unit"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "kind"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "kind"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "measured",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#BasisKind:_measured6a5cc68c"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "derived",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#BasisKind:_derived08f0be88"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "default",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#BasisKind:_default37a8eec1"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "substituted",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#BasisKind:_substituted40961b2f"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#kind",
+    "idShort" : "kind"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "eventIds"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "eventIds"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#eventIds",
+    "idShort" : "eventIds"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "method"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "method"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#method",
+    "idShort" : "method"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "source"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "source"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#source",
+    "idShort" : "source"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "basis"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "basis"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#basis",
+    "idShort" : "basis"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Values of the classification's properties, each keyed by its published property URI."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Type properties"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#typeProperties",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Type properties"
+    } ],
+    "idShort" : "typeProperties"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Values of the IFC Pset_ManufacturerTypeInformation properties."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Manufacturer type properties"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#manufacturerType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Manufacturer type properties"
+    } ],
+    "idShort" : "manufacturerType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "selfManaged"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "selfManaged"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#selfManaged",
+    "idShort" : "selfManaged"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "madeInPod"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "madeInPod"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#madeInPod",
+    "idShort" : "madeInPod"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "True when the part is counted in bulk and carries no quantity."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "bulkCount"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#bulkCount",
+    "idShort" : "bulkCount"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "How the part is supplied and counted in an assembly."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Composition"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#composition",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Composition"
+    } ],
+    "idShort" : "composition"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "jobOrderId"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "jobOrderId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#jobOrderId",
+    "idShort" : "jobOrderId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "requirementId"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "requirementId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#requirementId",
+    "idShort" : "requirementId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "quantity"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "quantity"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#quantity",
+    "idShort" : "quantity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "uom"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "uom"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#uom",
+    "idShort" : "uom"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The ISA-95 job order material requirement the part answers."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Job order line"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#jobOrder",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Job order line"
+    } ],
+    "idShort" : "jobOrder"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "sha256"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "sha256"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#sha256",
+    "idShort" : "sha256"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#contentType",
+    "idShort" : "contentType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_COUNT",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "sizeBytes"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "sizeBytes"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#sizeBytes",
+    "idShort" : "sizeBytes"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The file format beyond its media type, such as iso-10303-242 or dstv-nc-8.0."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "format"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#format",
+    "idShort" : "format"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The part's geometry and machining files (AP242, AP238, DSTV NC/XNC), referenced by URI and SHA-256, never embedded."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Fabrication files"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#fabricationFiles",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Fabrication files"
+    } ],
+    "idShort" : "fabricationFiles"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "formKind"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "formKind"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "channel",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormKind:_channel69e36568"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "rod",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormKind:_rodae4a6acd"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "hex-nut",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormKind:_hex-nut0f071dbd"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "square-washer",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormKind:_square-washercd23d5f9"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "anchor",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormKind:_anchor79bfb0e2"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#formKind",
+    "idShort" : "formKind"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "parameter"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "parameter"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "length",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_length0f82aca6"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "width",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_widthdec0f004"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "height",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_height39e0f5ef"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "thickness",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_thickness260c0aac"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "diameter",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_diameter00a02fc5"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "widthAcrossFlats",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_widthAcrossFlatsaec81071"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "holeDiameter",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "ConceptDescription",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormParameter:_holeDiameter3784b676"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#parameter",
+    "idShort" : "parameter"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Each dimension the form kind needs, mapped to the published property that holds its value."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "dimensions"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#dimensions",
+    "idShort" : "dimensions"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The part's parametric base form: a form kind whose dimensions are read, by property URI, from the part's own typeProperties or, for a dimension that varies by occurrence, from an assembly occurrence's parameters. Each value is held once. It is the design and coordination form a model is generated from; the part's fabrication geometry stays the AP242 file in fabricationFiles, which governs fabrication wherever both exist."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Base form"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#baseForm",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Base form"
+    } ],
+    "idShort" : "baseForm"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "authoredAt"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "authoredAt"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#authoredAt",
+    "idShort" : "authoredAt"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "authoredBy"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "authoredBy"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#authoredBy",
+    "idShort" : "authoredBy"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "illustrative"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "illustrative"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#illustrative",
+    "idShort" : "illustrative"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "sources"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "sources"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#sources",
+    "idShort" : "sources"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Who authored the record, when, from which sources, and whether it is illustrative."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Provenance"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#provenance",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Provenance"
+    } ],
+    "idShort" : "provenance"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:org.openmaterial.part-record:0.2.1#PartRecord/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "One part type or part instance: its identity, its classification in published systems, its property values with their basis, and the files it is made from (Open Material)."
+    } ],
+    "idShort" : "PartRecord",
+    "submodelElements" : [ {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#materialDefinitionId"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "value" : "https://id.example.org/parts/strut-channel-41x41",
+      "valueType" : "xs:anyURI",
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "One",
+        "valueType" : "xs:string"
+      }, {
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/ExampleValue",
+        "value" : "https://id.example.org/parts/strut-channel-41x41",
+        "valueType" : "xs:string"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Material definition ID"
+      } ],
+      "idShort" : "materialDefinitionId"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Identity"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "One",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "How the part is identified: its IEC 61406 identification link and the AAS globalAssetId it resolves to."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Identity"
+      } ],
+      "idShort" : "identity",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#iec61406Link"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "iec61406Link"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#globalAssetId"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "globalAssetId"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#assetKind"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "assetKind"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#serialNumber"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "serialNumber"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#lot"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "lot"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#classification"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "OneToMany",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "The part's classes in published systems: ETIM for the product, IFC and CCI for the element."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Classification"
+      } ],
+      "idShort" : "classification",
+      "orderRelevant" : false,
+      "semanticIdListElement" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#ClassificationReference"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#ClassificationReference"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "description" : [ {
+          "language" : "en",
+          "text" : "The part's classes in published systems: ETIM for the product, IFC and CCI for the element."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "Classification"
+        } ],
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#system"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "system"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#code"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "code"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#version"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "version"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#uri"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "uri"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#licence"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "licence"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#resolution"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "resolution"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#resolvedVia"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "resolvedVia"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#observedAt"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:date",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "observedAt"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#synthetic"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:boolean",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "synthetic"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#label"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "label"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#typeProperties"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "OneToMany",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Values of the classification's properties, each keyed by its published property URI."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Type properties"
+      } ],
+      "idShort" : "typeProperties",
+      "orderRelevant" : false,
+      "semanticIdListElement" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValue"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "description" : [ {
+          "language" : "en",
+          "text" : "Values of the classification's properties, each keyed by its published property URI."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "Type properties"
+        } ],
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertyUri"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyCode"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertyCode"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#name"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "name"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertySet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertySet"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#dataType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "dataType"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToMany",
+            "valueType" : "xs:string"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "The units the property's dictionary allows, as the dictionary publishes their symbols."
+          } ],
+          "idShort" : "allowedUnits",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#numericValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:decimal",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "numericValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#textValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "textValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#booleanValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:boolean",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "booleanValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#unit"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "unit"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Basis"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "basis",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#kind"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "One",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "kind"
+          }, {
+            "modelType" : "SubmodelElementList",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#eventIds"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToMany",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "eventIds",
+            "orderRelevant" : false,
+            "typeValueListElement" : "SubmodelElementCollection",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:org.openmaterial.part-record:0.2.1#eventIds"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string"
+            } ]
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#method"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToOne",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "method"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#source"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToOne",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "source"
+          } ]
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#manufacturerType"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "ZeroToMany",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Values of the IFC Pset_ManufacturerTypeInformation properties."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Manufacturer type properties"
+      } ],
+      "idShort" : "manufacturerType",
+      "orderRelevant" : false,
+      "semanticIdListElement" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValue"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#PropertyValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "description" : [ {
+          "language" : "en",
+          "text" : "Values of the IFC Pset_ManufacturerTypeInformation properties."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "Manufacturer type properties"
+        } ],
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertyUri"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyCode"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertyCode"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#name"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "name"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertySet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "propertySet"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#dataType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "dataType"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToMany",
+            "valueType" : "xs:string"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "The units the property's dictionary allows, as the dictionary publishes their symbols."
+          } ],
+          "idShort" : "allowedUnits",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#allowedUnits"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#numericValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:decimal",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "numericValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#textValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "textValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#booleanValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:boolean",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "booleanValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#unit"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "unit"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Basis"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "basis",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#kind"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "One",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "kind"
+          }, {
+            "modelType" : "SubmodelElementList",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#eventIds"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToMany",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "eventIds",
+            "orderRelevant" : false,
+            "typeValueListElement" : "SubmodelElementCollection",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:org.openmaterial.part-record:0.2.1#eventIds"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string"
+            } ]
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#method"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToOne",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "method"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#source"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "ZeroToOne",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "source"
+          } ]
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Composition"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "ZeroToOne",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "How the part is supplied and counted in an assembly."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Composition"
+      } ],
+      "idShort" : "composition",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#selfManaged"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:boolean",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "selfManaged"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#madeInPod"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:boolean",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "madeInPod"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#bulkCount"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:boolean",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "bulkCount"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#JobOrderLine"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "ZeroToOne",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "The ISA-95 job order material requirement the part answers."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Job order line"
+      } ],
+      "idShort" : "jobOrder",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#jobOrderId"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "jobOrderId"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#requirementId"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "requirementId"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#quantity"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:decimal",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "quantity"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#uom"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "ZeroToOne",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "uom"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#fabricationFiles"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "ZeroToMany",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "The part's geometry and machining files (AP242, AP238, DSTV NC/XNC), referenced by URI and SHA-256, never embedded."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Fabrication files"
+      } ],
+      "idShort" : "fabricationFiles",
+      "orderRelevant" : false,
+      "semanticIdListElement" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FileReference"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FileReference"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "description" : [ {
+          "language" : "en",
+          "text" : "The part's geometry and machining files (AP242, AP238, DSTV NC/XNC), referenced by URI and SHA-256, never embedded."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "Fabrication files"
+        } ],
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#uri"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "uri"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#sha256"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "sha256"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#contentType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "One",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "contentType"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#sizeBytes"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:nonNegativeInteger",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "sizeBytes"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#format"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "qualifiers" : [ {
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "kind" : "TemplateQualifier",
+            "type" : "SMT/Cardinality",
+            "value" : "ZeroToOne",
+            "valueType" : "xs:string"
+          } ],
+          "idShort" : "format"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#BaseForm"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "ZeroToOne",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "The part's parametric base form: a form kind whose dimensions are read, by property URI, from the part's own typeProperties or, for a dimension that varies by occurrence, from an assembly occurrence's parameters. Each value is held once. It is the design and coordination form a model is generated from; the part's fabrication geometry stays the AP242 file in fabricationFiles, which governs fabrication wherever both exist."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Base form"
+      } ],
+      "idShort" : "baseForm",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#formKind"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "formKind"
+      }, {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#dimensions"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "OneToMany",
+          "valueType" : "xs:string"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "Each dimension the form kind needs, mapped to the published property that holds its value."
+        } ],
+        "idShort" : "dimensions",
+        "orderRelevant" : false,
+        "semanticIdListElement" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormDimension"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#FormDimension"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "description" : [ {
+            "language" : "en",
+            "text" : "Each dimension the form kind needs, mapped to the published property that holds its value."
+          } ],
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#parameter"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "One",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "parameter"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:org.openmaterial.part-record:0.2.1#propertyUri"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:anyURI",
+            "qualifiers" : [ {
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "kind" : "TemplateQualifier",
+              "type" : "SMT/Cardinality",
+              "value" : "One",
+              "valueType" : "xs:string"
+            } ],
+            "idShort" : "propertyUri"
+          } ]
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:org.openmaterial.part-record:0.2.1#Provenance"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "qualifiers" : [ {
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "kind" : "TemplateQualifier",
+        "type" : "SMT/Cardinality",
+        "value" : "One",
+        "valueType" : "xs:string"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Who authored the record, when, from which sources, and whether it is illustrative."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Provenance"
+      } ],
+      "idShort" : "provenance",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#authoredAt"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:date",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "authoredAt"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#authoredBy"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "authoredBy"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#illustrative"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:boolean",
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "One",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "illustrative"
+      }, {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:org.openmaterial.part-record:0.2.1#sources"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "qualifiers" : [ {
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "kind" : "TemplateQualifier",
+          "type" : "SMT/Cardinality",
+          "value" : "OneToMany",
+          "valueType" : "xs:string"
+        } ],
+        "idShort" : "sources",
+        "orderRelevant" : false,
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:org.openmaterial.part-record:0.2.1#sources"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string"
+        } ]
+      } ]
+    } ]
+  } ]
+}

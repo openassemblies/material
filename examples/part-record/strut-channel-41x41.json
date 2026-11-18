@@ -1,0 +1,139 @@
+{
+  "materialDefinitionId": "https://id.example.org/parts/strut-channel-41x41",
+  "identity": {
+    "assetKind": "Type"
+  },
+  "classification": [
+    {
+      "system": "etim",
+      "code": "EC000386",
+      "version": "10.1",
+      "uri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/class/EC000386",
+      "licence": "odc-by-1.0",
+      "resolution": "VERIFIED",
+      "resolvedVia": "bsdd-api Class/v1",
+      "observedAt": "2026-10-27",
+      "synthetic": false
+    },
+    {
+      "system": "ifc",
+      "code": "IfcMechanicalFastener",
+      "version": "4.3",
+      "uri": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/class/IfcMechanicalFastener",
+      "licence": "cc-by-nd-4.0",
+      "resolution": "VERIFIED",
+      "resolvedVia": "bsdd classRelations IsChildOf on EC000386",
+      "observedAt": "2026-10-27",
+      "synthetic": false
+    }
+  ],
+  "typeProperties": [
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000008",
+      "propertyCode": "EF000008",
+      "dataType": "Real",
+      "allowedUnits": [
+        "mm"
+      ],
+      "numericValue": 41,
+      "unit": "MMT",
+      "basis": {
+        "kind": "substituted",
+        "source": "illustrative value for this example, not read from a catalogue"
+      }
+    },
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000040",
+      "propertyCode": "EF000040",
+      "dataType": "Real",
+      "allowedUnits": [
+        "mm"
+      ],
+      "numericValue": 41,
+      "unit": "MMT",
+      "basis": {
+        "kind": "substituted",
+        "source": "illustrative value for this example, not read from a catalogue"
+      }
+    },
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000386",
+      "propertyCode": "EF000386",
+      "dataType": "Real",
+      "allowedUnits": [
+        "mm"
+      ],
+      "numericValue": 2.5,
+      "unit": "MMT",
+      "basis": {
+        "kind": "substituted",
+        "source": "illustrative value for this example, not read from a catalogue"
+      }
+    },
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF001438",
+      "propertyCode": "EF001438",
+      "dataType": "Real",
+      "allowedUnits": [
+        "mm"
+      ],
+      "numericValue": 300,
+      "unit": "MMT",
+      "basis": {
+        "kind": "substituted",
+        "source": "illustrative value for this example, not read from a catalogue"
+      }
+    }
+  ],
+  "manufacturerType": [
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Manufacturer",
+      "propertySet": "Pset_ManufacturerTypeInformation",
+      "dataType": "String"
+    },
+    {
+      "propertyUri": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ModelLabel",
+      "propertySet": "Pset_ManufacturerTypeInformation",
+      "dataType": "String"
+    }
+  ],
+  "composition": {
+    "selfManaged": true,
+    "madeInPod": false
+  },
+  "jobOrder": {
+    "jobOrderId": "JO-EXAMPLE-001",
+    "requirementId": "MAT-1",
+    "quantity": 1,
+    "uom": "EA"
+  },
+  "provenance": {
+    "authoredAt": "2026-11-18",
+    "authoredBy": "Open Material example",
+    "illustrative": true,
+    "sources": [
+      "buildingSMART Data Dictionary: ETIM 10.1 class EC000386 and its properties, IFC 4.3 IfcMechanicalFastener"
+    ]
+  },
+  "baseForm": {
+    "formKind": "channel",
+    "dimensions": [
+      {
+        "parameter": "length",
+        "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF001438"
+      },
+      {
+        "parameter": "width",
+        "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000008"
+      },
+      {
+        "parameter": "height",
+        "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000040"
+      },
+      {
+        "parameter": "thickness",
+        "propertyUri": "https://identifier.buildingsmart.org/uri/etim/etim/10.1/prop/EF000386"
+      }
+    ]
+  }
+}

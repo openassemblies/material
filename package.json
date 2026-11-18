@@ -1,0 +1,26 @@
+{
+  "name": "@openassemblies/material",
+  "version": "0.2.1",
+  "description": "Open Material: an open standard for the part record. JSON Schema and AAS submodel template, generated from a SAMM aspect model, served at https://openmaterial.org/.",
+  "license": "Apache-2.0",
+  "homepage": "https://openmaterial.org/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openassemblies/material.git"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "site": "node scripts/build-site.mjs",
+    "served": "node scripts/check-served.mjs",
+    "generate": "python3 scripts/generate.py"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
