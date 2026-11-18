@@ -1,0 +1,342 @@
+#######################################################################
+# Open Material -- part record, 0.2.1
+# The source of https://openmaterial.org/part-record/0.2.1/part-record.schema.json
+# and of its AAS submodel template, both generated from this aspect model.
+# Entities and characteristics that are shared definitions -- classification
+# references, the basis of a value, file references, units and quantities --
+# are bound to them at their pinned versions; see each one's description.
+#######################################################################
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:org.openmaterial.part-record:0.2.1#> .
+
+:PartRecord a samm:Aspect ;
+   samm:preferredName "Part record"@en ;
+   samm:description "One part type or part instance: its identity, its classification in published systems, its property values with their basis, and the files it is made from (Open Material)."@en ;
+   samm:properties ( :materialDefinitionId :identity :classification :typeProperties [ samm:property :manufacturerType ; samm:optional true ] [ samm:property :composition ; samm:optional true ] [ samm:property :jobOrder ; samm:optional true ] [ samm:property :fabricationFiles ; samm:optional true ] [ samm:property :baseForm ; samm:optional true ] :provenance ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+# ---- top-level properties -------------------------------------------
+
+:materialDefinitionId a samm:Property ;
+   samm:preferredName "Material definition ID"@en ;
+   samm:description "The part's ISA-95 material definition identifier, as a URI."@en ;
+   samm:characteristic :Uri ;
+   samm:exampleValue "https://id.example.org/parts/strut-channel-41x41"^^xsd:anyURI .
+
+:identity a samm:Property ;
+   samm:preferredName "Identity"@en ;
+   samm:description "How the part is identified: its IEC 61406 identification link and the AAS globalAssetId it resolves to."@en ;
+   samm:characteristic :IdentityCharacteristic .
+
+:classification a samm:Property ;
+   samm:preferredName "Classification"@en ;
+   samm:description "The part's classes in published systems: ETIM for the product, IFC and CCI for the element."@en ;
+   samm:characteristic :ClassificationList .
+
+:typeProperties a samm:Property ;
+   samm:preferredName "Type properties"@en ;
+   samm:description "Values of the classification's properties, each keyed by its published property URI."@en ;
+   samm:characteristic :PropertyValueList .
+
+:manufacturerType a samm:Property ;
+   samm:preferredName "Manufacturer type properties"@en ;
+   samm:description "Values of the IFC Pset_ManufacturerTypeInformation properties."@en ;
+   samm:characteristic :PropertyValueList .
+
+:composition a samm:Property ;
+   samm:preferredName "Composition"@en ;
+   samm:description "How the part is supplied and counted in an assembly."@en ;
+   samm:characteristic :CompositionCharacteristic .
+
+:jobOrder a samm:Property ;
+   samm:preferredName "Job order line"@en ;
+   samm:description "The ISA-95 job order material requirement the part answers."@en ;
+   samm:characteristic :JobOrderLineCharacteristic .
+
+:fabricationFiles a samm:Property ;
+   samm:preferredName "Fabrication files"@en ;
+   samm:description "The part's geometry and machining files (AP242, AP238, DSTV NC/XNC), referenced by URI and SHA-256, never embedded."@en ;
+   samm:characteristic :FileReferenceList .
+
+:baseForm a samm:Property ;
+   samm:preferredName "Base form"@en ;
+   samm:description "The part's parametric base form: a form kind whose dimensions are read, by property URI, from the part's own typeProperties or, for a dimension that varies by occurrence, from an assembly occurrence's parameters. Each value is held once. It is the design and coordination form a model is generated from; the part's fabrication geometry stays the AP242 file in fabricationFiles, which governs fabrication wherever both exist."@en ;
+   samm:characteristic :BaseFormCharacteristic .
+
+:provenance a samm:Property ;
+   samm:preferredName "Provenance"@en ;
+   samm:description "Who authored the record, when, from which sources, and whether it is illustrative."@en ;
+   samm:characteristic :ProvenanceCharacteristic .
+
+# ---- characteristics ------------------------------------------------
+
+:Uri a samm:Characteristic ;
+   samm:dataType xsd:anyURI .
+
+:Text a samm:Characteristic ;
+   samm:dataType xsd:string .
+
+:Flag a samm:Characteristic ;
+   samm:dataType xsd:boolean .
+
+:Decimal a samm:Characteristic ;
+   samm:dataType xsd:decimal .
+
+:Day a samm:Characteristic ;
+   samm:dataType xsd:date .
+
+:UnitOfMeasure a samm:Characteristic ;
+   samm:description "A UN/CEFACT Recommendation 20 common code (bound to the open standard's units definition)."@en ;
+   samm:dataType xsd:string .
+
+:TextList a samm-c:List ;
+   samm:dataType xsd:string .
+
+:Count a samm:Characteristic ;
+   samm:dataType xsd:nonNegativeInteger .
+
+:Resolution a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "VERIFIED" "UNVERIFIED" "PENDING" "NONE-AVAILABLE" ) .
+
+:BasisKind a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "measured" "derived" "default" "substituted" ) .
+
+:AssetKind a samm-c:Enumeration ;
+   samm:description "The AAS asset kind."@en ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Type" "Instance" "Batch" ) .
+
+:IdentityCharacteristic a samm:Characteristic ;
+   samm:dataType :Identity .
+
+:ClassificationList a samm-c:List ;
+   samm:dataType :ClassificationReference .
+
+:PropertyValueList a samm-c:List ;
+   samm:dataType :PropertyValue .
+
+:CompositionCharacteristic a samm:Characteristic ;
+   samm:dataType :Composition .
+
+:JobOrderLineCharacteristic a samm:Characteristic ;
+   samm:dataType :JobOrderLine .
+
+:FileReferenceList a samm-c:List ;
+   samm:dataType :FileReference .
+
+:ProvenanceCharacteristic a samm:Characteristic ;
+   samm:dataType :Provenance .
+
+:BasisCharacteristic a samm:Characteristic ;
+   samm:dataType :Basis .
+
+:BaseFormCharacteristic a samm:Characteristic ;
+   samm:dataType :BaseForm .
+
+:FormKind a samm-c:Enumeration ;
+   samm:description "The base form's geometry, each in its own local frame (origin, local Z, local X): channel -- a lipped channel section of width (local X) and height (local Y), centred on local Z, swept along local Z for its length; rod -- a circular section of its diameter centred on local Z, from the origin along local Z for its length; hex-nut -- a hexagon of its width across flats centred on local Z, from the origin along local Z for its height, bored to its hole diameter; square-washer -- a square of its width centred on local Z, from the origin along local Z for its thickness, bored to its hole diameter; anchor -- a cylinder of its diameter centred on local Z, from the origin along local Z for its length."@en ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "channel" "rod" "hex-nut" "square-washer" "anchor" ) .
+
+:FormParameter a samm-c:Enumeration ;
+   samm:description "A base-form dimension, as its form kind uses it."@en ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "length" "width" "height" "thickness" "diameter" "widthAcrossFlats" "holeDiameter" ) .
+
+:FormDimensionList a samm-c:List ;
+   samm:dataType :FormDimension .
+
+# ---- entities -------------------------------------------------------
+
+:Identity a samm:Entity ;
+   samm:properties ( [ samm:property :iec61406Link ; samm:optional true ] [ samm:property :globalAssetId ; samm:optional true ] :assetKind [ samm:property :serialNumber ; samm:optional true ] [ samm:property :lot ; samm:optional true ] ) .
+
+:iec61406Link a samm:Property ;
+   samm:description "The IEC 61406 identification link (a GS1 Digital Link under EN 18219 is accepted)."@en ;
+   samm:characteristic :Uri .
+
+:globalAssetId a samm:Property ;
+   samm:description "The AAS globalAssetId the identification link resolves to."@en ;
+   samm:characteristic :Uri .
+
+:assetKind a samm:Property ;
+   samm:characteristic :AssetKind .
+
+:serialNumber a samm:Property ;
+   samm:characteristic :Text .
+
+:lot a samm:Property ;
+   samm:characteristic :Text .
+
+:ClassificationReference a samm:Entity ;
+   samm:description "Bound to https://schemas.ectropy.ai/v/0.1.0/_definitions/classification-ref.schema.json."@en ;
+   samm:properties ( :system :code [ samm:property :version ; samm:optional true ] [ samm:property :uri ; samm:optional true ] :licence :resolution [ samm:property :resolvedVia ; samm:optional true ] :observedAt :synthetic [ samm:property :label ; samm:optional true ] ) .
+
+:system a samm:Property ;
+   samm:description "The classification system, such as etim, ifc or cci."@en ;
+   samm:characteristic :Text .
+
+:code a samm:Property ;
+   samm:characteristic :Text .
+
+:version a samm:Property ;
+   samm:characteristic :Text .
+
+:uri a samm:Property ;
+   samm:characteristic :Uri .
+
+:licence a samm:Property ;
+   samm:characteristic :Text .
+
+:resolution a samm:Property ;
+   samm:characteristic :Resolution .
+
+:resolvedVia a samm:Property ;
+   samm:characteristic :Text .
+
+:observedAt a samm:Property ;
+   samm:characteristic :Day .
+
+:synthetic a samm:Property ;
+   samm:characteristic :Flag .
+
+:label a samm:Property ;
+   samm:characteristic :Text .
+
+:PropertyValue a samm:Entity ;
+   samm:description "One property's value, keyed by its published property URI. At most one of numericValue, textValue and booleanValue is present, and a present value carries its basis."@en ;
+   samm:properties ( :propertyUri [ samm:property :propertyCode ; samm:optional true ] [ samm:property :name ; samm:optional true ] [ samm:property :propertySet ; samm:optional true ] [ samm:property :dataType ; samm:optional true ] [ samm:property :allowedUnits ; samm:optional true ] [ samm:property :numericValue ; samm:optional true ] [ samm:property :textValue ; samm:optional true ] [ samm:property :booleanValue ; samm:optional true ] [ samm:property :unit ; samm:optional true ] [ samm:property :basis ; samm:optional true ] ) .
+
+:propertyUri a samm:Property ;
+   samm:characteristic :Uri .
+
+:propertyCode a samm:Property ;
+   samm:characteristic :Text .
+
+:name a samm:Property ;
+   samm:characteristic :Text .
+
+:propertySet a samm:Property ;
+   samm:characteristic :Text .
+
+:dataType a samm:Property ;
+   samm:description "The property's data type as its dictionary publishes it."@en ;
+   samm:characteristic :Text .
+
+:allowedUnits a samm:Property ;
+   samm:description "The units the property's dictionary allows, as the dictionary publishes their symbols."@en ;
+   samm:characteristic :TextList .
+
+:numericValue a samm:Property ;
+   samm:characteristic :Decimal .
+
+:textValue a samm:Property ;
+   samm:characteristic :Text .
+
+:booleanValue a samm:Property ;
+   samm:characteristic :Flag .
+
+:unit a samm:Property ;
+   samm:characteristic :UnitOfMeasure .
+
+:basis a samm:Property ;
+   samm:characteristic :BasisCharacteristic .
+
+:Basis a samm:Entity ;
+   samm:description "Bound to https://schemas.ectropy.ai/v/0.8.0/flow/flow-common.schema.json#/definitions/basis."@en ;
+   samm:properties ( :kind [ samm:property :eventIds ; samm:optional true ] [ samm:property :method ; samm:optional true ] [ samm:property :source ; samm:optional true ] ) .
+
+:kind a samm:Property ;
+   samm:characteristic :BasisKind .
+
+:eventIds a samm:Property ;
+   samm:characteristic :TextList .
+
+:method a samm:Property ;
+   samm:characteristic :Text .
+
+:source a samm:Property ;
+   samm:characteristic :Text .
+
+:BaseForm a samm:Entity ;
+   samm:properties ( :formKind :dimensions ) .
+
+:formKind a samm:Property ;
+   samm:characteristic :FormKind .
+
+:dimensions a samm:Property ;
+   samm:description "Each dimension the form kind needs, mapped to the published property that holds its value."@en ;
+   samm:characteristic :FormDimensionList .
+
+:FormDimension a samm:Entity ;
+   samm:properties ( :parameter :propertyUri ) .
+
+:parameter a samm:Property ;
+   samm:characteristic :FormParameter .
+
+:Composition a samm:Entity ;
+   samm:properties ( :selfManaged :madeInPod [ samm:property :bulkCount ; samm:optional true ] ) .
+
+:selfManaged a samm:Property ;
+   samm:characteristic :Flag .
+
+:madeInPod a samm:Property ;
+   samm:characteristic :Flag .
+
+:bulkCount a samm:Property ;
+   samm:description "True when the part is counted in bulk and carries no quantity."@en ;
+   samm:characteristic :Flag .
+
+:JobOrderLine a samm:Entity ;
+   samm:properties ( :jobOrderId :requirementId [ samm:property :quantity ; samm:optional true ] [ samm:property :uom ; samm:optional true ] ) .
+
+:jobOrderId a samm:Property ;
+   samm:characteristic :Text .
+
+:requirementId a samm:Property ;
+   samm:characteristic :Text .
+
+:quantity a samm:Property ;
+   samm:characteristic :Decimal .
+
+:uom a samm:Property ;
+   samm:characteristic :UnitOfMeasure .
+
+:FileReference a samm:Entity ;
+   samm:description "Bound to https://schemas.ectropy.ai/v/0.1.0/_definitions/file-reference.schema.json."@en ;
+   samm:properties ( :uri :sha256 :contentType [ samm:property :sizeBytes ; samm:optional true ] [ samm:property :format ; samm:optional true ] ) .
+
+:sha256 a samm:Property ;
+   samm:characteristic :Text .
+
+:contentType a samm:Property ;
+   samm:characteristic :Text .
+
+:sizeBytes a samm:Property ;
+   samm:characteristic :Count .
+
+:format a samm:Property ;
+   samm:description "The file format beyond its media type, such as iso-10303-242 or dstv-nc-8.0."@en ;
+   samm:characteristic :Text .
+
+:Provenance a samm:Entity ;
+   samm:properties ( :authoredAt :authoredBy :illustrative :sources ) .
+
+:authoredAt a samm:Property ;
+   samm:characteristic :Day .
+
+:authoredBy a samm:Property ;
+   samm:characteristic :Text .
+
+:illustrative a samm:Property ;
+   samm:characteristic :Flag .
+
+:sources a samm:Property ;
+   samm:characteristic :TextList .
